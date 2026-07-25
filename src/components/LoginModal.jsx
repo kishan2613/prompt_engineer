@@ -31,9 +31,7 @@ const result = await login(email);
     <div className="w-full max-w-md rounded-3xl border border-white/10 bg-[#111827]/95 p-8 shadow-2xl">
 
       <div className="mb-8 text-center">
-        <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-600 text-2xl font-bold">
-          PF
-        </div>
+       
 
         <h1 className="text-3xl font-bold">
           PromptForge
@@ -85,7 +83,7 @@ const result = await login(email);
         </p>
 
         <p className="mt-1 font-semibold text-indigo-400">
-          Ask admin@gmail.com
+          Mail to: kishankr2613@gmail.com
         </p>
 
       </div>
