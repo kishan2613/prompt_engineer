@@ -1,8 +1,8 @@
 import { useState } from "react";
 import {
-  Group,
+  PanelGroup,
   Panel,
-  Separator,
+  PanelResizeHandle,
 } from "react-resizable-panels";
 
 import Navbar from "../components/Navbar";
@@ -17,7 +17,6 @@ function Dashboard() {
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-[#0B1020] text-white">
-      {/* Login Modal */}
       {!isLoggedIn && (
         <>
           <div className="absolute inset-0 z-40 bg-black/40 backdrop-blur-md" />
@@ -30,23 +29,23 @@ function Dashboard() {
       <Navbar />
 
       <div className="h-[calc(100vh-72px)] p-5">
-        <Group
-          orientation="horizontal"
-          className="flex h-full w-full"
+        <PanelGroup
+          direction="horizontal"
           autoSaveId="promptforge-layout"
+          className="flex h-full w-full"
         >
-          <Panel defaultSize="60%" minSize="35%">
+          <Panel defaultSize={60} minSize={35}>
             <PromptPanel prompt={prompt} />
           </Panel>
 
-          <Separator className="group flex w-2 cursor-col-resize items-center justify-center">
+          <PanelResizeHandle className="group flex w-2 cursor-col-resize items-center justify-center">
             <div className="h-full w-[2px] rounded-full bg-white/10 transition-all duration-200 group-hover:w-1 group-hover:bg-indigo-500" />
-          </Separator>
+          </PanelResizeHandle>
 
-          <Panel defaultSize="40%" minSize="25%">
+          <Panel defaultSize={40} minSize={25}>
             <ChatPanel setPrompt={setPrompt} />
           </Panel>
-        </Group>
+        </PanelGroup>
       </div>
     </div>
   );
