@@ -35,8 +35,10 @@ function Dashboard() {
           className="flex h-full w-full"
         >
           <Panel defaultSize={60} minSize={35}>
-            <PromptPanel prompt={prompt} />
-          </Panel>
+  <div className="h-full min-h-0">
+    <PromptPanel prompt={prompt} />
+  </div>
+</Panel>
 
           <PanelResizeHandle className="group flex w-2 cursor-col-resize items-center justify-center">
             <div className="h-full w-[2px] rounded-full bg-white/10 transition-all duration-200 group-hover:w-1 group-hover:bg-indigo-500" />
