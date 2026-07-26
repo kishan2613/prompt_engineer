@@ -126,7 +126,7 @@ export default function ChatPanel({ setPrompt }) {
       "https://api.groq.com/openai/v1/chat/completions",
       {
         model: "llama-3.3-70b-versatile",
-        temperature: 0.4,
+        temperature: 0.7,
         messages: [
           {
             role: "system",
